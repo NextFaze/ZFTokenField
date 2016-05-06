@@ -143,7 +143,8 @@
     self.textField.frame = (CGRect) {0,0,50,[self.dataSource lineHeightForTokenInField:self]};
     
     [self invalidateIntrinsicContentSize];
-    [self.textField setText:@""];
+    [self.textField setText:@"\u200B"];
+    self.tempTextFieldText = [self.textField rawText];
 }
 
 - (NSUInteger)numberOfToken
